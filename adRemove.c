@@ -12,6 +12,7 @@ char** solution(const char* strArr[], size_t strArr_len) {
     *q = NULL;
     return answer;
 }
+
 int main() {
   const char* strArr[] = {"and","notad","abcd"};
   char **answer = solution(strArr, 3);
