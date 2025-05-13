@@ -1,6 +1,7 @@
 #include <stdio.h>
-
+#include <time.h>
 int main() {
+  clock_t start = clock(), finish;
   int n=0, cnt=0, odd=0;
   scanf("%d",&n);
 
@@ -15,9 +16,13 @@ int main() {
     if (n==1)
     {
       printf("%d\n",odd);
+      finish = clock();
+      printf("%f초입니다.\n",(float)(finish-start)/CLOCKS_PER_SEC);
       return 0;
     }
   }
   printf("-1\n");
+  finish = clock();
+  printf("%f초입니다.\n",(float)(finish-start)/CLOCKS_PER_SEC);
   return 0;
 }
